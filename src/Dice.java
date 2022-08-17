@@ -9,14 +9,20 @@ public class Dice {
         int side = scanner.nextInt();
         System.out.println("Think of the number from 1 to " +side);
         int num = scanner.nextInt();
-            while (num <= 0 || num >= side) {
-                System.out.println("The number must be between 1 and " +side);
-                num = scanner.nextInt();
+
+            if (scanner.hasNextInt()) {
+                while (num <= 0 || num >= side) {
+                    System.out.println("The number must be between 1 and " + side);
+                    num = scanner.nextInt();
+                }
             }
+            else {System.out.println("You need to enter a number, You damn ass");}
+
         scanner.close();
+
         Random random = new Random();
-        int result = random.nextInt(side) + 1;
-        int count = 1;
+        int result = 0;
+        int count = 0;
             while (result != num) {
                 result = random.nextInt(side) + 1;
                 ++count;
