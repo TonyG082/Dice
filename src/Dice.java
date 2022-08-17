@@ -26,6 +26,5 @@ public class Dice {
             System.out.println("The dice is pair");
         else
             System.out.println("The dice is unpair");
-
     }
 }
