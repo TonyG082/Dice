@@ -9,7 +9,7 @@ public class Dice {
         int side = scanner.nextInt();
         System.out.println("Think of the number from 1 to " +side);
         int num = scanner.nextInt();
-
+            //Checking if the number
             if (scanner.hasNextInt()) {
                 while (num <= 0 || num >= side) {
                     System.out.println("The number must be between 1 and " + side);
@@ -17,7 +17,7 @@ public class Dice {
                 }
             }
             else {System.out.println("You need to enter a number, You damn ass");}
-
+        //End check
         scanner.close();
 
         Random random = new Random();
